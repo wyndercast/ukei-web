@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+
+<ng-container *ngIf="sobreNosotros | async as SobreNosotros">
+    <div class="container">
+        <div>
+            <div>
+                <h2>{{SobreNosotros.data.attributes.bannerDos.textBannerUno}}</h2>
+            </div>
+            <div class="mobile">
+                <markdown class="text-description-white" [data]="SobreNosotros.data.attributes.bannerDos.textBannerDos"></markdown>
+            </div>
+            <div class="button-about">
+                <button [routerLink]="['/caso']" class="button text-banner-tres">Cuéntanos tu caso
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div><img class="img-about" [src]="SobreNosotros.data.attributes.bannerDos.imageBanner.data.attributes.url"/></div>
+            <div class="text-description-white" style="text-align: center;">{{SobreNosotros.data.attributes.bannerDos.textImage}}</div>
+            <div style="text-align: center;"><button (click)="scroll()" class="button-arrow"></button></div>
+        </div>
+        <div class="desktop">
+            <markdown class="text-description-white" [data]="SobreNosotros.data.attributes.bannerDos.textBannerDos"></markdown>
+        </div>
+    </div>
+    <div class="container-dos" id="target">
+        <h2 style="text-align: center;">
+            {{SobreNosotros.data.attributes.tituloUno}}
+        </h2>
+        <hr style="border: 3px solid #93FFD8;width: 60px;"/>
+        <markdown class="text-description-gray" [data]="SobreNosotros.data.attributes.textoUno"></markdown>
+        <div class="card-body">
+            <div class="container-card-grid">
+                <div *ngFor="let card of SobreNosotros.data.attributes.cards; let i = index">
+                    <div class="card width512">
+                        <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                        <div class="text-container"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div>
+
+            <div class="cloud-top container-cloud">
+                <div class="container-cloud-two">
+                    <div class="img-cover-logo"><img src="{{SobreNosotros.data.attributes.cloud.image.data.attributes.url}}"/></div>
+                    <div class="text-container-card-cloud">
+                        <markdown class="text-card-cloud" [data]="SobreNosotros.data.attributes.cloud.contenido"></markdown>
+                        <div class="cloud-button">
+                            <button [routerLink]="['/consultas']" class="button button-color">Ir a consultas
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<app-footer></app-footer>

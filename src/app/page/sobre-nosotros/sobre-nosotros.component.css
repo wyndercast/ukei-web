@@ -1,0 +1,166 @@
+.container{
+    background-image: url('/assets/image/servicios.png');
+    background-size: 100vw 121vh;
+    padding: 46px 265px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    background-size: cover;
+}
+.container h2{
+    font-family: Nunito-Black;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 43px;
+    color: white;
+}
+.button-arrow{
+    background-image: url('/assets/image/Flecha.png');
+    width: 45px;
+    background-color: transparent;
+    height: 42px;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.container-dos{
+    background-image: url('/assets/image/wall-morado2.png');
+    background-size: 100vw 173vh;
+    padding: 46px 265px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    background-size:  cover;
+}
+
+.container-card-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 409px);
+    justify-content: center;
+    padding: 45px 0px;
+    justify-items: center;
+    gap: 20px;
+}
+.card{
+    background-color: white;
+    border-radius: 40px;
+    max-width: 260px;
+    padding: 20px;
+    min-height: 155px;
+    height: 317px;
+}
+.img-icono{
+    text-align: center;
+    padding: 10px;
+}
+.container-cloud {
+    background-color: white;
+    box-shadow: 0px 0px 9px #8982FF47;
+    border-radius: 30px;
+    position: relative;
+}
+.img-cloud-home {
+    position: absolute;
+    bottom: -4px;
+    right: 80px;
+}
+.container-cloud .text-container-card-cloud {
+    padding: 45px 49px;
+}
+.text-card-cloud ::ng-depp h2{
+    font-size: 25px;
+}
+.text-card-cloud ::ng-deep p{
+    font-size: 18px;
+}
+.text-card-cloud{
+    font-family: Nunito-Regular;
+    font-size : 23px;
+    line-height: 32px;
+}
+.img-cover-logo{
+    margin-left: -153px;
+}
+.img-cloud-home {
+    position: absolute;
+    bottom: -4px;
+    right: 80px;
+}
+.container-cloud-two {
+    background-color: white;
+    box-shadow: 0px 0px 9px #8982FF47;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-banner-tres{
+    color:#5148FF;
+    background-color: white;
+    box-shadow: 4px 5px 9px 9px #8982FF;
+    border: 1px solid white;
+    font-size: 13px;
+}
+
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+.button-about{
+    margin-top: 15px;
+}
+@media screen and (min-width : 346px) and (max-width: 576px) { /** móviles**/
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .container{
+        padding: 42px 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .button-about{
+        text-align: center;
+    }
+    .img-about{
+        width: 80%;
+        padding: 10px;
+    }
+    .container-dos{
+        padding: 42px 30px;
+    }
+    .container-card-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-cloud-two {
+        flex-direction: column;
+    }
+    .card .img-icono{
+        padding-top: 0px;
+        text-align: left;
+    }
+    .card .img-icono img{
+        width: 50%;
+    }
+    .container-cloud .text-container-card-cloud{
+        padding: 0px 30px;
+    }
+    .img-cover-logo{
+        margin-left: 0;
+    }
+    .img-cover-logo img{
+        width: 60%;
+        margin-top: -75px;
+        margin-left: 52px;
+    }
+    .cloud-button{
+        text-align: center;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,25 @@
+<ng-container *ngIf="footer | async as Footer">
+    <div class="container">
+        <div class="grid-footer">
+            <div class="brand">
+                <img [src]="Footer.data.attributes.logo.data.attributes.url"/>
+                <markdown class="text-card" [data]="Footer.data.attributes.contenido"></markdown>
+            </div>
+            <div class="menu-footer">
+                <div class="grid-menu"> 
+                    <ul class="menu" *ngFor="let item of Footer.data.attributes.menu">
+                        <li><a [routerLink]="['/', item.url]" [routerLinkActive]="['option-active']">{{item.name}}</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                       <div class="grid-soial" *ngFor="let link of Footer.data.attributes.social">
+                            <a target="_blank" href="{{link.url}}"><img [src]="link.icono.data.attributes.url"/></a>
+                       </div> 
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="text-card" style="padding: 10px;text-align: center;">{{Footer.data.attributes.copy}}</div>
+        </div>
+    </div>
+</ng-container>

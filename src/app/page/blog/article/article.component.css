@@ -1,0 +1,137 @@
+.container{
+    background-color: #E6EAF3;
+    background-image: url('/assets/image/wall-morado1.png');
+    padding: 20px 275px;
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    background-size: cover;
+}
+.img-gotas{
+    position: absolute;
+    left: 0;
+    top: 170px;
+}
+.desktop{
+    display: block;
+  }
+.container-article{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.header-article{
+    display: flex;
+}
+.container-text-blog{
+    padding: 20px;
+}
+.category{
+    font-family: Nunito-Regular;
+    font-weight: 700;
+    font-size: 15px;
+    color: #7D48FF;
+}
+.category-date{
+    display: flex;
+    align-items: center;
+}
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.container-recommend{
+    grid-column: 1/3;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+.card-blog{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.image-card{
+    width: 100%;    
+    height: 100%;
+    max-height: 195px;
+    border-radius: 10px 10px 0px 0px;
+}
+.texto-titulo{
+    font-family: Nunito-Black;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .card-recommend{
+    display: grid;
+    grid-template-columns: 1fr  300px;
+    padding: 10px;
+    padding-left: 20px;
+  }
+  .biography ::ng-deep p{
+    display: block;
+    display: -webkit-box;
+    height: 12px * 1.4 * 2;
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.category{
+    font-family: Nunito-Regular;
+    font-weight: 700;
+    font-size: 15px;
+    color: #7D48FF;
+}
+.see-articles{
+    color: #7D48FF !important;
+    font-weight: 700;
+    font-family: Nunito-Regular;
+    padding-top: 20px;
+    font-size: 15px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+.card-flex .img-icono{
+    padding: 0px 10px;
+    text-align: center;
+    width: 100px;
+}
+.card-flex{
+    background-color: white;
+    border-radius: 40px;
+    max-width: 592px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.container-card-grid{
+    padding: 20px;
+}
+.img-article{
+    width: 100%;
+}
+
+@media screen and (min-width: 325px) and (max-width: 576px) {
+    .container{
+        padding: 20px 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .desktop{
+        display: none;
+    }
+    .blog-grid  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-recommend{
+        grid-column: 1;
+    }
+    .card-recommend{
+        grid-template-columns: 1fr 240px;
+    }
+    .recomendaciones{
+        margin-top: 20px !important;
+    }
+}

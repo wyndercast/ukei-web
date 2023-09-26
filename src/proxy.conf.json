@@ -1,0 +1,7 @@
+{
+    "/uploads": {
+      "target": "http://3.84.51.104:1337",
+      "secure": false
+    }
+  }
+  

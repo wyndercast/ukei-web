@@ -1,0 +1,21 @@
+h2{
+    font-size: 30px;
+    font-family: Nunito-Black !important;
+    color: black;
+}
+.mat-mdc-dialog-actions{
+    justify-content: center;
+}
+.mat-mdc-dialog-container{
+    width: 60%;
+}
+.cdk-overlay-pane{
+    max-width: 22vw !important;
+}
+.text-description-gray{
+    font-size: 15px;
+    text-align: center;
+}
+.btn{
+    width: auto !important;
+}

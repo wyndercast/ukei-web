@@ -1,0 +1,22 @@
+
+  <div  class="container">
+
+    <div class="text-testimonial">
+      <h2 class="text-color-section" style="text-align: center;">{{Data.data.attributes.carrusel.titulo}}</h2>
+      <markdown class="text-description-white" [data]="Data.data.attributes.carrusel.descripcion"></markdown>
+    </div>
+      
+    <owl-carousel-o [options]="customOptions" class="gtco-testimonials">
+        <ng-template carouselSlide *ngFor="let testimonio of Data.data.attributes.carrusel.testimonio">
+          <div class="card text-center"><img class="card-img-top" [src]="testimonio.avatar.data.attributes.url" alt="">
+            <div class="card-body">
+              <h5>{{testimonio.titulo}} <br />
+                <span> {{testimonio.cargo}} </span>
+              </h5>
+              <markdown class="card-text" [data]="testimonio.testimonio"></markdown>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+  </div>
+

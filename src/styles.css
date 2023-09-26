@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('src/assets/font/static/Nunito-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('src/assets/font/static/Nunito-Bold.ttf');
+  } 
+  @font-face {
+    font-family: 'Nunito-Black';
+    src: url('src/assets/font/static/Nunito-Black.ttf');
+  } 
+  @font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url('src/assets/font/static/Nunito-ExtraBold.ttf');
+  } 
+.text-color-section{
+  color: white;
+}
+.text-color-section-black{
+  color: #27203E;
+}
+h2{
+  font-family: Nunito-Black;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 43px;
+  margin-bottom: 0;
+}
+.button-color {
+  background-color: #8982FF;
+  border: 1px solid #8982FF;
+  color:  white;
+}
+
+h3{
+  font-family: Nunito-Regular;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+}
+.text-description-white{
+  font-family: Nunito-Regular;
+  font-size : 18px;
+  line-height: 25px;
+  color: white;
+}
+.text-description-gray{
+  font-family: Nunito-Regular;
+  font-size : 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #595272;
+}
+.w-100{
+  width: 100%;
+}
+.lf{
+  float:left
+}
+
+.button{
+  padding: 16px 16px; 
+  padding: 16px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Nunito-Bold;
+  text-align: center;
+  border-radius: 10px; 
+  width: auto;
+  font-size: 16px;
+  text-align:center;
+}
+
+.button-white {
+  background-color: transparent;
+  border: 1px solid #8982FF;
+  color:  #8982FF;
+ 
+}
+
+.button-purple {
+  background-color: #8982FF;
+  color: white;
+  font-size: 17px;
+  font-family: Nunito-Regular;
+  padding: 11px;
+  border-radius: 16px;
+  font-weight: 600;
+  border: #8982FF;
+  width: 200px;
+}
+.container-block{
+  padding: 20px 275px;
+  background: linear-gradient(to top,
+  #E6EAF3 50%,
+  white 50%);
+}
+.text-card{
+  font-family: Nunito-Regular;
+  font-size : 18px;
+  line-height: 25px;
+}
+
+.text-form{
+  font-family: Nunito-Regular;
+  font-size : 18px;
+  line-height: 25px;
+  color: #595272
+  ;
+}
+
+@media screen and (max-width:512px) {
+  .button{
+    width: 80% !important;
+  }
+  .text-card-cloud p {
+    font-size: 16px !important;
+  }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

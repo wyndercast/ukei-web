@@ -1,0 +1,97 @@
+.container{
+    padding: 76px 265px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-bottom: 90px;
+    background-image: url('/assets/image/fondi-01.png');
+    background-size: 100% 100%;
+}
+.title{
+    font-family: Nunito-Black;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 52px;
+}
+
+.title-c{
+    text-align: center;
+    grid-column: 1/3;
+    margin-top: 60px;
+}
+
+.img-container{
+    position: absolute;
+    z-index: -1;
+    height: auto;
+    width: 100%;
+}
+.title ::ng-deep strong{
+    color: #7D48FF;
+}
+.container-image{
+    text-align: center;
+}
+.text{
+    font-family: Nunito-Regular;
+    font-size : 23px;
+    line-height: 30px;
+ }
+
+ .shadow {
+    box-shadow: 2px 4px 40px 10px white;
+ }
+ .container-text-banner{
+    padding: 5px;
+ }
+ .desktop-one{
+    display: block;
+}
+.mobile-one{
+    display: block;
+}
+.mobile-two{
+    display: none;
+}
+.desktop-two{
+    display: none;
+}
+
+ @media screen and (min-width: 315px) and (max-width: 576px){
+    .title-c{
+        grid-column: 1;
+    }
+    .img-container{
+        height: 97%;
+    }
+    .desktop-one{
+        display: none;
+    }
+    .mobile-one{
+        display: none;
+    }
+    .mobile-two{
+        display: block;
+    }
+    .desktop-two{
+        display: block;
+    }
+    .container{
+       padding: 46px 30px;
+       display: grid;
+       justify-items: center;
+       grid-template-columns: repeat(1, 1fr);     
+    }
+    .title{
+        font-size: 15px;
+    }
+    .container-image img {
+        width: 285px;
+    }
+    .text p{
+        font-size: 20px;
+    }
+    .button-div{
+        text-align: center;
+    }
+ }

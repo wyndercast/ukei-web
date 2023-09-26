@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<ng-container *ngIf="consumidor | async as Consumidor">
+    <app-banner [Data]="Consumidor"></app-banner>
+    <app-help-section [Data]="Consumidor"></app-help-section>
+    <app-stepper [Data]="Consumidor"></app-stepper>
+    <app-form [Data]="Consumidor"></app-form>
+    <app-accordion [Data]="Consumidor"></app-accordion>
+</ng-container>
+<app-footer></app-footer>
+
+

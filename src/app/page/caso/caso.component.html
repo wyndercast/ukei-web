@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<ng-container *ngIf="caso | async as Caso">
+    <div class="container">
+        <div class="banner">
+            <div>
+                <markdown class="title" [data]="Caso.data.attributes.textoBanner"></markdown>
+            </div>
+            <div>
+                <div class="mobile">
+                    <div class="icono"><img src="/assets/image/caso.png"/></div>
+                    <div class="container-image-form">
+                        <img [src]="Caso.data.attributes.form.icono.data.attributes.url"/>
+                    </div>
+                </div>    
+                <div class="container-form">
+                    <form (ngSubmit)="crearCaso()" [formGroup]="casoForm">
+                       <div class="form-inputs"> 
+                            <label class="text-form">{{Caso.data.attributes.form.nombreLabel}}</label>
+                            <input placeholder="{{Caso.data.attributes.form.placeHolderName}}" formControlName="primerNombre"/>
+                            <div *ngIf="submmited || (primerNombre?.dirty || primerNombre?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['primerNombre'].errors?.['required']">
+                                Nombre es requerido.
+                            </div>
+                        </div>
+                       </div>
+                       <div class="form-inputs">
+                            <label class="text-form">{{Caso.data.attributes.form.emailLabel}}</label>
+                            <input placeholder="{{Caso.data.attributes.form.placeHolderEmail}}" formControlName="correoElectronico"/>
+                            <div *ngIf="submmited || (correoElectronico?.dirty || correoElectronico?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['correoElectronico'].errors?.['required']">
+                                Corrreo es requerido.
+                            </div>
+                            <div *ngIf="validate['correoElectronico'].errors?.['pattern'] && validate['correoElectronico'].errors?.['email']">
+                                Correo invalido.
+                            </div>
+                        </div>
+                       </div>
+                       <div class="form-inputs">
+                            <label  class="text-form">{{Caso.data.attributes.form.descripcionLabel}}</label>
+                            <textarea placeholder="{{Caso.data.attributes.form.placeHolderDescripcion}}" formControlName="descripcionCasoCliente"></textarea>
+                            <div *ngIf="submmited || (descripcionCasoCliente?.dirty || descripcionCasoCliente?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['descripcionCasoCliente'].errors?.['required']">
+                                Descripción es requerido.
+                            </div>
+                        </div>
+                        </div>
+                       <div class="button-form-dos">
+                            <button class="button button-color" type="submit">Enviar solicitud</button>
+                       </div>
+                    </form>
+                </div>
+                <div class="container-image-form desktop">
+                    <img [src]="Caso.data.attributes.form.icono.data.attributes.url"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-help">
+        <h2 style="text-align: center;">
+            {{Caso.data.attributes.titulo}}
+        </h2>
+        <hr style="border: 3px solid #93FFD8;width: 60px;"/>
+        <div>
+            <div class="container-card-grid">
+                <div *ngFor="let card of Caso.data.attributes.cards; let i = index" class="one">
+                    <div class="card-flex width512">
+                        <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                        <div class="text-container"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</ng-container>
+<app-footer></app-footer>

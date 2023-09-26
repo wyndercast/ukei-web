@@ -1,0 +1,180 @@
+.container-accordion{
+    background-image: url('/assets/image/servicios.png');
+    background-size: cover;
+    padding: 16px 265px;
+    background-size: 100vw 190vh;
+    float: left;
+    background-size: cover;
+}
+.img-cover-logo{
+    margin-left: -92px;
+}
+.container{
+    padding: 20px;
+}
+.accordion-item{
+    margin-top: 20px;
+}
+.button-accordion{
+    background-color: white;
+    height: 83px;
+    border: 1px solid white;
+    width: 100%;
+}
+.accordion-item{
+    box-shadow: 0px 5px 9px 0px white;
+    border-radius: 10px;
+}
+.accordion-body{
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    padding: 20px;
+}
+.accordion-header{
+    margin-top: 40px;
+}
+
+.container-cloud-two {
+    background-color: white;
+    box-shadow: 0px 0px 9px #8982FF47;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-cloud-home {
+    position: absolute;
+    bottom: -4px;
+    right: 80px;
+}
+.container-cloud .text-container-card-cloud {
+    padding: 20px 30px;
+}
+.text-card-cloud ::ng-depp h2{
+    font-size: 20px;
+}
+.text-card-cloud ::ng-deep p{
+    font-size: 20px;
+}
+.text-card-cloud{
+    font-family: Nunito-Regular;
+    font-size : 23px;
+    line-height: 32px;
+}
+.text-title{
+    font-family: Nunito-Black;
+    font-size: 18px;
+    line-height: 25px;
+    float: left;
+    padding: 20px;
+    text-align: left;
+    
+}
+.text-title::before {
+    background-image: url('/assets/image/chevron-down.png');
+    transform: rotate(-180deg);
+}
+.cloud-top {
+    margin-top: -150px;
+}
+.cloud-top-two {
+    margin-top: 60px
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+
+.border-one{
+    box-shadow: -6px 3px 14px 0px #fff;
+}
+.border-two{
+    box-shadow: -14px -8px 18px -5px white;
+    
+}
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba%2844, 56, 74, 0.95%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+    display: flex;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232d1cc5'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);;
+  }
+  .accordion-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media screen and (min-width: 350px) and (max-width: 578px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .container-accordion{
+        padding: 16px 20px;
+    }
+    .text-container-card-cloud button{
+        margin-bottom: 20px !important;
+      }
+      .container-cloud-two {
+        background-color: white;
+        box-shadow: 0px 0px 9px #8982FF47;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .img-cloud-home {
+          position: absolute;
+          bottom: -4px;
+          right: 80px;
+      }
+      .container-cloud .text-container-card-cloud {
+          padding: 0px 20px;
+      }
+      .text-card-cloud ::ng-depp h2{
+          font-size: 25px;
+      }
+      .text-card-cloud ::ng-deep p{
+          font-size: 18px;
+      }
+      .text-card-cloud{
+          font-family: Nunito-Regular;
+          font-size : 23px;
+          line-height: 32px;
+      }
+      .text-title{
+          font-family: Nunito-Black;
+          font-size: 18px;
+          line-height: 25px;
+          float: left;
+          padding: 20px;
+          text-align: left;   
+      }
+      .img-cover-logo img{
+          margin-top: -104px;
+          width: 230px;
+      }
+      .cloud-top{
+        margin-top: 0px;
+      }
+      .img-cover-logo{
+        margin-left: -26px;
+      }
+}

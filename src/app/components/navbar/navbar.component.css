@@ -1,0 +1,171 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    position: relative;
+    height: 118px;
+    left: 0;
+    top: 0 ;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 7px 0px 0px #9999990d;
+}
+
+li{
+    font-family: Nunito-Regular;
+    font-weight:400;
+    font-size : 16px;
+    line-height: 21px;
+}
+.logo {
+    width: 97px;
+    height: 42px;
+}
+nav li{
+    flex-grow:1;
+    text-align:center;
+    list-style: none;
+   
+}
+nav li a.option-active{
+    background: url('/assets/image/icono-style.png') no-repeat top;
+    background-repeat: no-repeat;
+}
+nav li a:hover:not(.option-active){
+    background: url('/assets/image/icono-style.png') no-repeat top;
+    background-repeat: no-repeat;
+    color: #7D48FF !important;
+    font-family: Nunito-Regular;
+    padding-top: 8px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #27203E;
+}
+nav ul {
+    display: flex;
+    gap: 50px;
+} 
+
+.button{
+    padding: 16px 16px; 
+    padding: 16px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    width: auto; 
+    text-align:center;
+}
+
+.button-white {
+    background-color: transparent;
+    border: 1px solid #8982FF;
+    color:  #8982FF;
+   
+}
+
+.button-color {
+    background-color: #8982FF;
+    border: 1px solid #8982FF;
+    color:  white;
+}
+.content-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_button{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: flex;
+    justify-content: center;
+    gap: 154px;
+}
+
+.option-active{
+    color: #7D48FF !important;
+    font-weight: 700;
+    font-family: Nunito-Black;
+    padding-top: 8px;
+}
+
+@media  screen and (min-width: 315px) and (max-width: 768px) {
+    .mobile{
+        display: flex;
+    }
+    .desktop{
+        display: none !important;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 25px;
+    }
+    .menu-mobile{
+        display: flex;
+        flex-flow: column;
+        background-color: white;
+        top: 0;
+        margin: 0 auto;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+        z-index: 1;
+    }
+    .container-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .menu-mobile ul li{
+        text-align: left;
+    }
+    .header_close{
+        display:  flex;
+        justify-content: end;
+        padding: 30px;
+    }
+}
+@media  screen and (min-width: 768px) and (max-width: 992px) {
+    .navbar{
+        gap: 68px;
+    }
+    nav ul{
+        gap: 25px;
+    }
+    .logo {
+        padding: 20px;
+    }
+}
+@media  screen and (min-width: 768px) and (max-width: 992px) {
+    .logo{
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+    .desktop{
+        gap: 30px;
+    }
+    .logo{
+        padding: 20px;
+    }
+    .menu{
+        gap: 45px;
+    }
+    
+}

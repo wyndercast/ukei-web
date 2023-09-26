@@ -1,0 +1,104 @@
+<app-navbar></app-navbar>
+<ng-container>
+    <img src="assets/image/E.png" class="img-gotas desktop"/>
+    <div class="container" *ngIf="article | async as article">
+        <div>
+            <div>
+                <img class="img-article" [src]="article.data.attributes.ImagenBanner.data.attributes.url"/>
+            </div>
+            <div>
+                <h2>{{article.data.attributes.titulo}}</h2>
+            </div>
+            <div class="container-article">
+                <div class="header-article">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img class="img-article" [src]="article.data.attributes.autores.data[0].attributes.avatar.data.attributes.url" />
+                        <div style="margin-bottom: 0;margin-left: 10px;" class="text-description-gray">{{article.data.attributes.autores.data[0].attributes.Autor}}</div>
+                    </div>
+                    <div class="text-card" style="text-align: right;width: 80%;">
+                        <div class="text-description-gray">{{article.data.attributes.publishedAt | date}}</div>
+                    </div>
+                </div>
+                <markdown class="text-description-gray" [data]="article.data.attributes.Articulo?.textoUno"></markdown>
+                <img class="img-article" [src]="article.data.attributes.Articulo?.imagenUno?.data?.attributes?.url"/>
+                <markdown class="text-description-gray" [data]="article.data.attributes.Articulo?.textoDos"></markdown>
+                <h2>{{article.data.attributes.Articulo?.tituloTres}}</h2>
+                <markdown class="text-description-gray" [data]="article.data.attributes.Articulo?.textoTres"></markdown>
+                <img class="img-article"  [src]="article.data.attributes.Articulo?.imagenTres?.data?.attributes?.url"/>
+                <h2>{{article.data.attributes.Articulo?.tituloCuatro}}</h2>
+                <markdown class="text-description-gray" [data]="article.data.attributes.Articulo?.textoCuatro"></markdown>
+            </div>
+        </div>
+        <div>
+            <h3 class="texto-titulo recomendaciones" style="margin-top:0; margin-left: 20px;">Los articulos mas leidos...</h3>
+            <div class="card-recommend" *ngFor="let article of Articles">
+                <div>
+                    <img style="width: 100%;height: 100%;border-radius: 10px;" [src]="article.attributes.ImagenBanner.data.attributes.url"/>
+                </div>
+                <div style="margin-left:10px">
+                    <div class="category">{{article.attributes.categories.data[0].attributes.Name}}</div>
+                    <markdown class="text-card biography" [data]="article.attributes.Articulo?.textoUno"></markdown>
+                </div>
+            </div>
+            <div><a class="see-articles" [routerLink]="['/blog']">Ver todos los articulos ></a></div>
+
+            <div>
+                <div>
+                    <div class="container-card-grid">
+                        <div>
+                            <div class="card-flex">
+                                <div class="img-icono-left"><img src="/assets/image/megafono.png"/></div>
+                                <h3 class="texto-titulo">¿Necesitas ayuda con tu reclamación?</h3>
+                                <div class="text-container text-description-gray"><p>Cuéntanos tu historia, nosotros te ayudamos a presentar la reclamación y lo hacemos posible.</p></div>
+                                <div><a style="padding-left: 0;" class="see-articles" [routerLink]="['/caso']">Envíanos tu solicitud ></a></div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="container-card-grid">
+                        <div>
+                            <div class="card-flex">
+                                <div class="img-icono-left"><img src="assets/image/Frame.png"/></div>
+                                <h3 class="texto-titulo">¿Tuviste una mala experiencia de compra?</h3>
+                                <div class="text-container text-description-gray"><p>Tienes derecho a recibir por lo que pagas.
+                                    Que nadie te diga lo contrario.</p></div>
+                                <div><a style="padding-left: 0;" class="see-articles" [routerLink]="['/caso']">Envíanos tu solicitud ></a></div>    
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="container-recommend">
+            <h2>Más artículos recomendados para ti...</h2>
+                <div class="blog-grid" *ngIf="articles | async as Art">
+                    <div *ngFor="let article of Articles" class="card-blog">
+                        <div [routerLink]="['/blog/article', article.id]">   
+                            <div>
+                                <img class="one image-card" [src]="article.attributes.ImagenBanner.data.attributes.url"/>
+                            </div>
+                            <div class="container-text-blog">
+                                <div class="category-date">
+                                    <div class="category">{{article.attributes.categories.data[0].attributes.Name}}</div>
+                                    <div class="text-card" style="text-align: right;width: 100%;">
+                                        <div>{{article.attributes.publishedAt | date}}</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="texto-titulo">{{article.attributes.titulo}}</h3>
+                                    <markdown class="text-card" [data]="article.attributes.Articulo?.textoUno"></markdown>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>   
+                </div>
+        </div>
+    </div>
+
+</ng-container>
+<app-footer></app-footer>

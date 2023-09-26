@@ -1,0 +1,522 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #9999990d;
+}
+
+.text{
+   font-family: Nunito-Regular;
+   font-size : 23px;
+   line-height: 30px;
+}
+.text-container-card{
+    padding: 15px;
+}
+
+.title{
+    font-family: Nunito-Black;
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 52px;
+}
+
+.title ::ng-deep strong{
+    color: #7D48FF;
+}
+
+.img-banner{
+    width: 160px;
+}
+.container-text {
+    padding: 10px 91px 94px;
+}
+.text ::ng-deep strong {
+    font-weight: 700;
+    font-family: Nunito-Bold;
+
+}
+
+.container-service{
+    background-image: url('/assets/image/servicios.png');
+    background-size: cover;
+    padding: 46px 265px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 40px;
+    max-width: 320px;
+    width: 320px;
+    height: 392px;
+    max-height: 400px;
+    margin: 5px;
+}
+
+.card-flex{
+    background-color: white;
+    border-radius: 40px;
+    max-width: 592px;
+    display: flex;
+    min-height: 140px;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.img-icono{
+    text-align: center;
+    padding: 10px;
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-stepper{
+    position: relative;;
+}
+
+.container-back{
+    background-image: url('/assets/image/Vector33.png'), url('/assets/image/Vector34.png');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.c-stepper__item {
+    display: flex;
+    gap: 1rem;
+}
+
+.title_help_dos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.c-stepper__item:before {
+    --size: 4rem;
+    position: relative;
+    z-index: 1;
+    flex: 0 0 var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: #93FFD8;
+    content: counter(step);
+    counter-increment: step;
+    text-align: center;
+    font-size: 32px;
+    font-family: Nunito-Black;
+    color: #3B365E;
+    line-height: 3.5rem;
+}
+
+.c-stepper__item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 4rem;
+}
+
+.c-stepper__item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(2rem);
+    width: 3px;
+    background-color: #93FFD8;
+}
+
+.stepper-text-black{
+    font-family: Nunito-ExtraBold;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    margin-left: 6px;
+}
+
+.stepper-text{
+    font-family: Nunito-Regular;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 6px;
+}
+
+.stepper-text ::ng-deep strong {
+    font-family: Nunito-Black;
+}
+.items{
+    display: flex;
+    align-items: center;
+}
+
+.stepper-title{
+    font-family: Nunito-Black;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 20px;
+    color: #554DF4;
+}
+.stepper-title-two{
+    font-family: Nunito-Black;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 6px;
+    color: #27203E;
+}
+.conatiner-stepper{
+    display: flex;
+    flex-direction: column;
+}
+.subtitle-stepper-item{
+    display: flex;
+    align-items: center;
+}
+.wrapper{
+    padding: 20px 230px;
+}
+.stepper-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container-gestion{
+    background-color: #E6EAF3;
+    background-image: url('/assets/image/wall-morado1.png');
+    padding: 20px 275px;
+    float: left;
+    background-position: 50% 100%;
+    background-size: cover;
+}
+.container-card-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding: 45px 0px;
+    gap: 25px;
+    
+}
+
+.container-cloud {
+    background-color: white;
+    box-shadow: 0px 0px 9px #8982FF47;
+    border-radius: 30px;
+    position: relative;
+}
+.container-cloud-two {
+    background-color: white;
+    box-shadow: 0px 0px 9px #8982FF47;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-cloud .text-container-card-cloud {
+    padding: 45px 56px;
+}
+.img-cloud-home {
+    position: absolute;
+    bottom: -4px;
+    right: 80px;
+}
+.text-card-cloud{
+    font-family: Nunito-Regular;
+    font-size : 22px;
+    line-height: 32px;
+}
+.text-card-cloud ::ng-deep strong{
+    font-family: Nunito-Bold;
+    font-size : 23px;
+}
+.text-card-cloud ::ng-deep h2{
+    font-family: Nunito-Black;
+    font-size : 27px;
+}
+.img-cover-logo{
+    margin-left: -92px;
+}
+
+@media screen and (min-width : 346px) and (max-width: 576px) { /** móviles**/
+    .container{
+        flex-direction:column;
+        display: flex;
+    }
+    .img-step{
+        width: 95%;
+    }
+    .container-text{
+        padding-bottom: 24px;
+        padding: 10px 30px 94px;
+    }
+    .c-stepper__item:not(:last-child):after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(1.5rem);
+        width: 3px;
+        background-color: #93FFD8;
+    }
+    .c-stepper__item:before {
+        --size: 3rem;
+        position: relative;
+        z-index: 1;
+        flex: 0 0 var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background-color: #93FFD8;
+        content: counter(step);
+        counter-increment: step;
+        text-align: center;
+        font-size: 28px;
+        font-family: Nunito-Black;
+        color: #3B365E;
+        line-height: 3.1rem;
+    }
+    .img-banner{
+        display: none;
+    }
+    .text{
+        font-size: 16px;
+    }.title{
+        font-size: 16px;
+    }
+    .container img{
+        width: 100%;
+    }
+    .button-white{
+        margin-left:0px !important;
+        margin-top: 20px;
+    }
+    .container-service{
+        padding: 45px 25px;
+    }   
+    .container-card{
+        flex-direction: column;
+        gap: 29px;
+        grid-template-columns: repeat(1, 1fr);
+    } 
+    .card{
+        max-width: 100% !important;
+        padding-bottom: 0px;
+        max-height: 358px;
+        height: 358px;
+    }
+    .card .img-icono{
+        text-align: left;
+        padding-bottom: 0px;
+    }
+    .card .img-icono img{
+        width: 90px;
+    }
+    .text-container-card{
+        padding-top: 0px;
+    }
+    .card-flex .img-icono{
+        padding: 0px 10px;
+        text-align: center;
+        width: 100px;
+    }
+    .card-flex{
+        background-color: white;
+        border-radius: 40px;
+        max-width: 592px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-card-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        padding: 45px 0px;
+    }
+    .text-container{
+        padding: 0px 15px;
+    }
+    .wrapper{
+        padding: 0px !important;
+    }
+    .c-stepper  {
+        padding: 10px 20px;
+    }
+    .stepper-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px 0px 15px 0px;
+    }
+    .container-gestion{
+        padding: 20px 25px;
+    }
+    .bt-c{
+        text-align: center;
+    }
+    .just-r{
+        display: flex;
+        flex-direction: row;
+    }
+    .stepper-title{
+        margin: 0;
+        margin-top: 15px;
+    }
+    
+    .container-block{
+        padding: 100px 25px 20px; 
+        background: linear-gradient(to top, #E6EAF3 50%, #E6EAF3 50%);
+    }
+    .container-cloud-two{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-card-cloud ::ng-depp h2{
+        font-size: 25px;
+    }
+    .text-card-cloud ::ng-deep p{
+        font-size: 18px;
+    }
+    .container-cloud .text-container-card-cloud{
+        padding: 10px 20px;
+    }
+    .img-cover-logo{
+        margin-left: 0px;
+        margin-top: -92px;
+    }
+    .img-cloud-home {
+        right: 26px;
+    }
+    .img-cloud-home img {
+        width: 92px;
+    }
+    .width512{
+        display: flex;
+        align-items: first baseline !important;
+    }
+    .width512 img{
+        width: 90px;
+    }
+}
+
+@media screen and (min-width : 570px) and (max-width: 768px){ /**tabletas**/
+    .container{
+        display: grid;
+    }
+    .container-text{
+        padding: 10px 65px 94px;
+    }
+    .img-banner{
+        display: none;
+    } 
+    .container-service{
+        padding: 46px 76px;
+    }
+    .container-card{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wrapper{
+        padding: 20px 30px;
+    }
+    .img-cover-logo{
+        text-align: center;
+        margin-top: -90px;
+        margin-left: 0;
+    }
+    .container-block{
+        padding: 20px 75px;
+    }.container-cloud-two{
+        display: grid;
+    }
+    .container-gestion{
+        padding: 20px 76px;
+    }
+    .card{
+        max-height: 390px;
+        height: 390px;
+    }      
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){ /**portátiles**/
+    .title{
+        font-size: 20px;
+    }
+    .text{
+        font-size: 17px;
+    }
+    .img-cover-banner{
+        width: 502px;
+    }
+    .home-button{
+        margin-left: 6px !important;
+    }
+    .container-service{
+        padding: 46px 76px;
+    }
+    .container-card{
+        gap: 16px;
+    }
+    .wrapper{
+        padding: 20px 47px
+    }
+    .container-block{
+        padding: 20px 113px
+    }
+    .container-gestion{
+        padding: 20px 76px;
+    }
+    .img-banner{
+        display: none;
+    }
+    .container-text{
+        padding: 10px 43px 25px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1500px){ /**grandes dispositivos**/
+    .container-text{
+        padding: 10px 27px 20px
+    }
+    .img-cover-banner{
+        width: 485px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .container-card{
+        gap: 28px;
+        display: grid;
+        grid-template-columns: repeat(2, 345px);
+    }
+    .container-service{
+        padding: 46px 76px;
+    }
+    .wrapper{
+        padding: 20px 76px;
+    }
+    .container-block{
+        padding: 20px 115px
+    }
+    .container-gestion{
+        padding: 20px 76px;
+    }
+    .home-button{
+        margin-left: 6px !important;
+    }
+    .img-banner{
+        display: none;
+    }
+}

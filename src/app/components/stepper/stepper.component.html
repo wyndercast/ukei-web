@@ -1,0 +1,30 @@
+<div class="container-stepper" *ngIf="Data">
+    <div class="container-back">
+        <div class="wrapper">
+        <h2 class="text-color-section-black" style="text-align: center;margin-bottom: 0;">{{Data.data.attributes.tituloDos}}</h2>
+        <hr style="border: 3px solid #93FFD8;width: 60px;"/>
+        <markdown class="text-description-gray" [data]="Data.data.attributes.textoDos"></markdown>
+        <div class="stepper-division">
+            <div class="stepper-one">
+                <img class="img-stepper" [src]="Data.data.attributes.iconStepperOnly.data.attributes.url"/>
+            </div>
+            <div>
+                <ol class="c-stepper">
+                    <li *ngFor="let step of Data.data.attributes.stepper; let i = index" class="c-stepper__item">
+                        <div class="stepper-container">
+                        <div class="conatiner-stepper"> 
+                            <div>
+                                <markdown class="text-description" [data]="step.description"></markdown>
+                            </div>
+                        </div>
+                    </div>  
+                    </li>
+                </ol>
+            </div>
+            <div class="stepper-two">
+                <img class="img-stepper" [src]="Data.data.attributes.iconStepperOnly.data.attributes.url"/>
+            </div>
+        </div>    
+        </div>
+    </div>
+</div>

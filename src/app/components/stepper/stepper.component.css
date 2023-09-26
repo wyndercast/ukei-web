@@ -1,0 +1,153 @@
+.container-stepper{
+    position: relative;;
+}
+
+.c-stepper__item {
+    display: flex;
+    gap: 1rem;
+}
+
+.c-stepper__item:before {
+    --size: 4rem;
+    position: relative;
+    z-index: 1;
+    flex: 0 0 var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: #93FFD8;
+    content: counter(step);
+    counter-increment: step;
+    text-align: center;
+    font-size: 32px;
+    font-family: Nunito-Black;
+    color: #3B365E;
+    line-height: 3.5rem;
+}
+
+.c-stepper__item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.container-back{
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+}
+.conatiner-stepper{
+    display: flex;
+    flex-direction: column;
+}
+.subtitle-stepper-item{
+    display: flex;
+    align-items: center;
+}
+.wrapper{
+    padding: 20px 230px;
+}
+
+.c-stepper__item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(2rem);
+    width: 3px;
+    background-color: #93FFD8;
+}
+.stepper-division{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-description-gray {
+    font-family: Nunito-Regular;
+    font-size: 21px;
+    line-height: 25px;
+    color: #595272;
+  }
+  .text-description-gray ::ng-deep strong{
+    font-family: Nunito-Bold;
+  }
+
+  .text-description ::ng-deep p {
+    font-family: Nunito-Regular;
+    font-size: 16px;
+    line-height: 25px;
+    color: #595272;
+  }
+  .stepper-one{
+    display: block;
+  }
+  .stepper-two{
+    display: none;
+  }
+
+  @media screen and (min-width: 330px) and (max-width:578px) {
+    .img-stepper{
+        width: 230px;
+    }
+    .text-description ::ng-deep p {
+        font-family: Nunito-Regular;
+        font-size: 14px;
+        line-height: 25px;
+        color: #595272;
+      }
+    .c-stepper__item:not(:last-child):after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(1.5rem);
+        width: 3px;
+        background-color: #93FFD8;
+    }
+    .wrapper{
+        padding: 20px 25px;
+    }
+    .stepper-division{
+        flex-direction: column;
+    }
+    .c-stepper{
+        padding: 0px;
+    }
+    .c-stepper__item::before{
+        --size: 3rem;
+        position: relative;
+        z-index: 1;
+        flex: 0 0 var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background-color: #93FFD8;
+        content: counter(step);
+        counter-increment: step;
+        text-align: center;
+        font-size: 28px;
+        font-family: Nunito-Black;
+        color: #3B365E;
+        line-height: 3.1rem;
+    }
+    .text-description ::ng-deep p {
+        margin-top: 0px;
+    }
+    .c-stepper__item{
+        padding-bottom: 10px;
+    }
+    .stepper-one{
+        display: none;
+    }
+    .stepper-two{
+        display: block;
+    }
+    .text-description-gray{
+        font-size: 16px;
+    }
+    .text-color-section-black{
+        padding-bottom: 10px !important;
+        margin-bottom: 0px;
+    }
+
+  }

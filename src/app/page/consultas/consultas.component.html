@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<ng-container>
+    <img src="assets/image/E.png" class="img-gotas desktop"/>
+    <div class="container" *ngIf="consulta | async as Consulta">
+        <div class="banner">
+            <div class="desktop">
+                <img [src]="Consulta.data.attributes.imagenBanner.data.attributes?.url"/>
+            </div>
+            <div>
+                <markdown class="title" [data]="Consulta.data.attributes.textoBanner">
+                    
+                </markdown>
+            </div>
+            <div class="mobile">
+                <img [src]="Consulta.data.attributes.imagenBanner.data.attributes?.url"/>
+            </div>
+
+            <div class="content-form">
+                <form  class="container-form" (ngSubmit)="consultarTramite()" [formGroup]="formTramite">
+                    <div class="input-form">
+                        <label class="text-form">Documento</label>
+                        <input formControlName="documento" placeholder="Ingresa número de documento"/>
+                        <div *ngIf="submmited || (documento?.dirty || documento?.touched)"
+                                class="alert alert-danger">
+                            <div style="position: absolute;" *ngIf="validate['documento'].errors?.['required']">
+                                Documento es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-form">    
+                        <label class="text-form">Código</label>
+                        <input formControlName="numeroTramite" placeholder="Ingresa tu código"/>
+                        <div *ngIf="submmited || (numeroTramite?.dirty || numeroTramite?.touched)">
+                            <div style="position: absolute;" *ngIf="validate['numeroTramite'].errors?.['required']">
+                                Código es requerido.
+                            </div>
+                        </div>
+                    </div>   
+                    <button class="button button-color button-search" type="submit">Consultar
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="container-step" *ngIf="tramite">
+            <div class="container-back">
+                <div class="wrapper">
+                        <ol class="c-stepper">
+                            <li *ngFor="let item of index; let i = index" class="c-stepper__item {{i <= step ? '':'op'}}" >
+                                <div class="stepper-container">
+                                    <div class="conatiner-stepper"> 
+                                        <div>
+                                            <h2>{{item.toString().split('-')[1]}}</h2>
+                                            <!--p class="text-description" >{{tramite.fechaCreacion | date:'medium'}}</p-->
+                                        </div>
+                                    </div>
+                                </div>  
+                            </li>
+                        </ol>
+                    </div>
+            </div>
+
+            <div class="container-query">
+                    <h1>Detalle de tu consulta</h1>
+                    <div>
+                        <h2>{{tramite!.cliente.primerNombre}} {{tramite!.cliente.segundoNombre}} {{tramite!.cliente.primerApellido}} {{tramite!.cliente.segundoApellido}}</h2>
+                        <div>DNI: {{tramite!.cliente.numeroIdentificacion}}</div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div class="items"> <label>FECHA DE CREACIÓN:</label><p>{{tramite!.fechaCreacion | date:'medium'}}</p></div>
+                        <div class="items"> <label>CÓDIGO:</label><p>{{tramite!.numeroTramite}}</p></div>
+                        <div class="items"> <label>TIPO DE TRÁMITE:</label><p>{{tramite!.tipoTramite}}</p></div>
+                        <div class="items"> <label>ESTADO:</label><p>{{tramite!.estado}}</p></div>
+                        <hr/>
+                    </div>    
+                        <label>DESCRIPCIÓN</label>
+                    <markdown class="text-description-gray"
+                        [data]="tramite!.descripcion">
+                    </markdown>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<app-footer></app-footer>

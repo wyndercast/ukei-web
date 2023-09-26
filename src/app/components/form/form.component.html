@@ -1,0 +1,55 @@
+<div class="container-image">
+    <div *ngIf="Data" id="target">
+        <div class="f-div">
+            <h2 style="text-align: center; margin: 0px;">{{Data.data.attributes.tituloTres}}</h2>
+            <hr style="border: 2px solid #93FFD8; width: 60px;">
+        </div>
+        <markdown style="text-align: center;" class="text-description-gray" [data]="Data.data.attributes.textoTres"></markdown>
+        <div class="container">
+            <div class="c-form">
+                <form (ngSubmit)="crearCaso()" [formGroup]="casoForm">
+                   <div class="form-inputs"> 
+                        <label class="text-form">{{Data.data.attributes.form.nombreLabel}}</label>
+                        <input placeholder="{{Data.data.attributes.form.placeHolderName}}" formControlName="primerNombre"/>
+                        <div *ngIf="submmited || (primerNombre?.dirty || primerNombre?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['primerNombre'].errors?.['required']">
+                                Nombre es requerido.
+                            </div>
+                        </div>
+                   </div>
+                   <div class="form-inputs">
+                        <label class="text-form">{{Data.data.attributes.form.emailLabel}}</label>
+                        <input placeholder="{{Data.data.attributes.form.placeHolderEmail}}" formControlName="correoElectronico"/>
+                        <div *ngIf="submmited || (correoElectronico?.dirty || correoElectronico?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['correoElectronico'].errors?.['required']">
+                                Correo es requerido.
+                            </div>
+                            <div *ngIf="validate['correoElectronico'].errors?.['pattern'] && validate['correoElectronico'].errors?.['email']">
+                                Correo invalido.
+                            </div>
+                        </div> 
+                   </div>
+                   <div class="form-inputs">
+                        <label  class="text-form">{{Data.data.attributes.form.descripcionLabel}}</label>
+                        <textarea placeholder="{{Data.data.attributes.form.placeHolderDescripcion}}" formControlName="descripcionCasoCliente"></textarea>
+                        <div *ngIf="submmited || (descripcionCasoCliente?.dirty || descripcionCasoCliente?.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="validate['descripcionCasoCliente'].errors?.['required']">
+                                Descripción es requerido.
+                            </div>
+                        </div>
+                   </div>
+                   <div class="mobile-button">
+                        <button class="button button-color" type="submit">Enviar solicitud</button>
+                   </div>
+                </form>
+            </div>
+            <div class="{{Data.data.attributes.secondClass ? 'container-image-form-second':'container-image-form'}}">
+                <img [src]="Data.data.attributes.form.icono.data.attributes.url"/>
+            </div>
+
+        </div>
+    </div>
+</div>

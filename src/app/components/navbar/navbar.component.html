@@ -1,0 +1,50 @@
+<header>
+    <nav *ngIf="navbar | async as NavBar" class="navbar">
+        <div>
+            <img class="logo" [routerLink]="['/home']" style="cursor: pointer;" src="{{NavBar.data.attributes.logo.data.attributes.url}}"/>
+        </div>
+        <div class="desktop">
+            <div class="content-menu">
+                <ul class="menu">
+                    <li *ngFor="let enlace of NavBar.data.attributes.menu">
+                        <a [routerLink]="['/', enlace.url]" [routerLinkActive]="['option-active']">{{enlace.name}}</a>
+                    </li>
+                </ul>
+            </div> 
+            <div>
+                <button type="button" [routerLink]="['/consultas']"  class="button button-white">Tus consultas</button>
+                <button type="button" [routerLink]="['/caso']" class="button button-color">Cuéntanos tu caso
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--Responsive-->
+        <div class="mobile"> 
+            <button class="header_button mobile"  
+                (click)="setActive()"
+                style="border-color: transparent;background-color: transparent;cursor: pointer;">
+                <img src="/assets/image/menu.png"/>
+            </button>
+            <div class="menu-mobile" *ngIf="active">
+                <div class="header_close">
+                    <button class="header_button mobile"  
+                        (click)="setActive()"
+                        style="border-color: transparent;background-color: transparent;cursor: pointer;">
+                        <img src="/assets/image/x.png"/>
+                    </button>
+                </div>
+                <ul class="menu header_ul" *ngFor="let enlace of NavBar.data.attributes.menu">
+                    <li><a [routerLink]="['/', enlace.url]">{{enlace.name}}</a></li>
+                </ul>
+                <div class="container-button">
+                    <button type="button" [routerLink]="['/consultas']" class="button button-white">Tus consultas</button>
+                    <button type="button" [routerLink]="['/caso']" class="button button-color">Cuéntanos tu caso
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div> 
+            </div>
+        
+        </div>   
+    </nav>
+</header>

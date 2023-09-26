@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<img src="assets/image/E.png" class="img-gotas desktop"/>
+<div class="container" *ngIf="blog | async as Blog">    
+        <h2 class="text-titulo">{{Blog.data.attributes.titulo}}</h2>
+        <markdown class="text-description-gray" [data]="Blog.data.attributes.descripcion"></markdown>
+        <div class="blog-grid" *ngIf="articles | async as Art">
+            <div *ngFor="let article of Articles; let i = index;" class="{{i == 0 ? 'card-blog-two':i == 1 ? 'card-blog-destacado':'card-blog'}}">
+                <div [routerLink]="['/blog/article', article.id]">   
+                    <div>
+                        <img class="{{i == 0 || i == 1 ? 'two':'one'}}" [src]="article.attributes.ImagenBanner.data.attributes.url"/>
+                    </div>
+                    <div class="{{i == 0 || i == 1 ? 'container-text-blog-two':'container-text-blog'}}">
+                        <div class="{{i == 0 || i == 1 ? 'category-date-two':'category-date'}}">
+                            <div class="category">{{article.attributes.categories.data[0].attributes.Name}}</div>
+                            <div class="text-card" style="text-align: right;width: 100%;">
+                                <div>{{article.attributes.publishedAt | date}}</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>{{article.attributes.titulo}}</h2>
+                            <markdown class="{{i == 0 || i == 1 ? 'text-description-white':'text-card'}}" [data]="article.attributes.Articulo?.textoUno"></markdown>
+                        </div>
+                    </div>
+                </div>     
+            </div>   
+        </div>
+        <div style="text-align: center;padding: 20px;">
+            <button class="button button-color" (click)="cargarBlogs()">Cargar mas artículos
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
+</div>
+<app-footer></app-footer>

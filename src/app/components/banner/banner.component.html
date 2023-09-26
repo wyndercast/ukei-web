@@ -1,0 +1,34 @@
+<ng-container *ngIf="Data">
+    <div>
+        <div class="container">            
+            <div>
+                <div class="container-image mobile-one">
+                    <img [src]="Data.data.attributes.banner.imageFondo.data.attributes.url"/>
+                </div>
+                <div class="desktop-two">
+                    <markdown class="title" [data]="Data.data.attributes.banner.title"></markdown>
+                </div>
+            </div>
+            <div class="container-text-banner">
+                
+                <div class="desktop-one">
+                    <markdown class="title" [data]="Data.data.attributes.banner.title"></markdown>
+                </div>
+                <div class="container-image mobile-two">
+                    <img [src]="Data.data.attributes.banner.imageFondo.data.attributes.url"/>
+                </div>
+
+                <div>
+                    <markdown class="text" [data]="Data.data.attributes.banner.content"></markdown>
+                </div>
+                <div class="button-div"> 
+                    <button (click)="scroll()" class="button button-color shadow">Cuéntanos tu caso</button>
+                </div>
+            </div>
+            <div class="title-c">
+                <h2>{{Data.data.attributes.tituloUno}}</h2>
+                <hr style="border: 3px solid #93FFD8;width: 60px;"/>
+            </div>
+        </div>    
+    </div>
+</ng-container>

@@ -1,0 +1,40 @@
+<div class="container-accordion" *ngIf="Data">
+  <ng-container>
+    <div>
+        <div class="{{Data.data.attributes.secondClass ? 'cloud-top':'cloud-top-two'}} container-cloud">
+            <div class="container-cloud-two {{Data.data.attributes.secondClass ? 'border-one':'border-two'}}">
+                <div class="img-cover-logo"><img src="{{Data.data.attributes.cloudDos.image.data.attributes.url}}"/></div>
+                <div class="text-container-card-cloud">
+                    <markdown class="text-card-cloud" [data]="Data.data.attributes.cloudDos.contenido"></markdown>
+                    <button class="button button-color" [routerLink]="['/consultas']">Tus consultas
+                      <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<div style="text-align: center;padding-bottom: 40px;padding-top: 70px;">
+  <h2 class="text-color-section" style="line-height: 28px;padding-bottom: 10px;">{{Data.data.attributes.tituloCuatro}}</h2>
+  <hr style="border: 3px solid #93FFD8;width: 60px;">
+</div>
+<div class="container">
+  <c-accordion>
+    <c-accordion-item #item0="cAccordionItem" [visible]="false" *ngFor="let accordion of Data.data.attributes.accordion">
+      <ng-template cTemplateId="accordionHeaderTemplate">
+        <button class="text-title accordion-button button-accordion" (click)="item0.toggleItem()" [collapsed]="!item0.visible" cAccordionButton>
+          {{accordion.tituloAccordion}}
+        </button>
+      </ng-template>
+      <ng-template cTemplateId="accordionBodyTemplate">
+        <div class="accordion-body">
+            {{accordion.textoAccordion}}          
+        </div>
+      </ng-template>
+    </c-accordion-item>
+  </c-accordion>
+  <div style="text-align: center;padding-top: 30px;">
+    <markdown class="text-description-white" [data]="Data.data.attributes.textoAccordionBottom"></markdown>
+  </div>
+</div>
+</div>

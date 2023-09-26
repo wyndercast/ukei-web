@@ -1,0 +1,153 @@
+<app-navbar></app-navbar>
+<ng-container *ngIf="home | async as Home">
+    <div class="container">
+        <img class="img-banner" src="assets/image/E.png">
+        <div class="container-text">
+            <markdown class="title" [data]="Home.data.attributes.bannerHome.title"></markdown>
+            <markdown class="text" [data]="Home.data.attributes.bannerHome.content"></markdown>
+            <div>
+                <button [routerLink]="['/caso']" class="button button-color">Cuéntanos tu caso
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="button button-white home-button" onclick="window.open('https://calendly.com/ukei-gestion/cuentanos-tu-caso', '_blank')"
+                    style="margin-left: 25px;">Llámanos ahora
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div style="margin-top: auto;"><img class="img-cover-banner" src="{{Home.data.attributes.bannerHome.imageFondo.data.attributes.url}}"/></div>
+    </div>
+    <div class="container-service">
+        <div class="container-description">
+            <div style="text-align: center;padding-bottom: 40px;">
+                <h2 class="text-color-section" style="line-height: 30px;">{{Home.data.attributes.titulo}}</h2>
+                <hr style="border: 3px solid #93FFD8;width: 60px;">
+            </div>
+            <div class="title_help_dos">
+                <img src="/assets/image/Frame8.png"/>
+                <h3 class="text-color-section">{{Home.data.attributes.subtitulo}}</h3>
+            </div>
+            <h2 class="text-color-section">{{Home.data.attributes.tituloContent}}</h2>
+            <markdown class="text-description-white" [data]="Home.data.attributes.parrafo"></markdown>
+        </div>
+        <ng-container>
+            <div class="container-card">
+                <div class="card" *ngFor="let card of Home.data.attributes.tarjeta">
+                    <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                    <div class="text-container-card"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="container-description" style="padding-top: 25px;">
+            <div class="title_help_dos">
+                <img src="/assets/image/Frame8.png"/>
+                <h3 class="text-color-section">{{Home.data.attributes.subtituloDos}}</h3>
+            </div>
+            <h2 class="text-color-section">{{Home.data.attributes.titluloSegundo}}</h2>
+            <markdown class="text-description-white" [data]="Home.data.attributes.segundoContenido"></markdown>
+        </div>
+        <ng-container>
+            <div class="container-card-grid">
+                <div class="card-flex width512" *ngFor="let card of Home.data.attributes.tarjetaSection">
+                    <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                    <div class="text-container"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="container-stepper">
+        <div class="container-back">
+            <div class="wrapper">
+            <h2 class="text-color-section-black" style="text-align: center;padding-bottom: 45px;">{{Home.data.attributes.titleStepper}}</h2>
+            <ol class="c-stepper">
+                <li *ngFor="let step of Home.data.attributes.stepper; let i = index" class="c-stepper__item">
+                    <div class="stepper-container">
+                    <div class="conatiner-stepper"> 
+                        <div class="c-stepper__content">
+                            <h3 class="stepper-title">{{step.title}}</h3>
+                            <div *ngFor="let item of step.item">
+                                <div class="items">
+                                    <img src="{{item.icono.data.attributes.url}}"/>   
+                                    <p class="stepper-text">{{item.itemname}}</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div *ngIf="step.titleIcono.data" class="subtitle-stepper-item">
+                            <img src="{{step.titleIcono.data.attributes.url}}"/>
+                            <h4 class="stepper-title-two">{{step.titleItem}}</h4>
+                        </div>
+                        <div>
+                            <markdown class="stepper-text" [data]="step.description"></markdown>
+                        </div>
+                        <div *ngIf="i == 0">
+                            <div class="subtitle-stepper-item">
+                                <img [src]="step.titleIcono.data.attributes.url"/>   
+                                <h4 class="stepper-title-two">OTRAS RECLAMACIONES</h4>
+                            </div>
+                            <div>
+                                <markdown class="stepper-text">Cualquier clase de reclamo: sector turismo, vivienda, aéreo, compras, etc.</markdown>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;margin: auto;">
+                        <img class="img-step" [src]="step.iconostepper.data.attributes.url"/>
+                    </div>  
+                </div>  
+                </li>
+            </ol>
+            </div> 
+        </div>
+    </div>
+    <div style="text-align: center;"> <button [routerLink]="['/caso']" class="button button-purple" style="width:15%">Cuéntanos tu caso aquí
+        <i class="fa-solid fa-pen" style="border-color: #ffffff;background-color: transparent;"></i>
+    </button></div>
+    <ng-container>
+        <div class="container-block">
+            <div class="container-cloud">
+                <div class="container-cloud-two">
+                    <div class="img-cover-logo"><img src="{{Home.data.attributes.section.image.data.attributes.url}}"/></div>
+                    <div class="text-container-card-cloud">
+                        <markdown class="text-card-cloud" [data]="Home.data.attributes.section.contenido"></markdown>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div class="container-gestion">
+        <div>
+            <div class="w-100 lf">
+                <h2>{{Home.data.attributes.tituloTres}}</h2>
+                <hr style="border: 3px solid #7EDCCD;width: 60px;border-color: #7EDCCD;float:left">
+            </div>
+            <div class="w-100 lf">
+                <markdown class="text-description-gray"  [data]="Home.data.attributes.contenidoTres"></markdown>
+            </div>
+            <div class="bt-c">
+            <button [routerLink]="['/caso']" style="z-index: 1000;position: relative;" class="button button-color">Cuéntanos tu caso
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+            </div>
+            <ng-container>
+                <div class="container-card-grid">
+                    <div class="card-flex just-r" *ngFor="let card of Home.data.attributes.tarjetasTres">
+                        <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                        <div class="text-container-card"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                    </div>
+                </div>
+            </ng-container>
+            <markdown class="text-description-gray" [data]="Home.data.attributes.textoDesc"></markdown>
+            <ng-container>
+                <div class="container-cloud">
+                    <div>
+                        <div class="img-cloud-home"><img src="{{Home.data.attributes.sectionCuatro.image.data.attributes.url}}"/></div>
+                        <div class="text-container-card-cloud">
+                            <markdown class="text-card-cloud" [data]="Home.data.attributes.sectionCuatro.contenido"></markdown>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <app-swiper [Data]="Home"></app-swiper>
+    <app-footer></app-footer>
+</ng-container>

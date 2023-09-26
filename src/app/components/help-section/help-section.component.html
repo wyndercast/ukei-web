@@ -1,0 +1,28 @@
+<ng-container *ngIf="Data">
+    <div class="container">
+        <div>
+            <div class="{{Data.data.attributes.secondClass ? 'container-card-grid-second':'container-card-grid'}}">
+                <div *ngFor="let card of Data.data.attributes.tarjetas; let i = index" class="{{i == 3 ? 'one':i == 4 ? 'two':''}}">
+                    <div class="{{Data.data.attributes.secondClass ? 'card card_second':'card-flex'}} width512">
+                        <div class="{{Data.data.attributes.secondClass ? 'img-icono-left':'img.icono'}}"><img src="{{card.icono.data.attributes.url}}"/></div>
+                        <div class="text-container"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div>
+
+            <div class="container-cloud">
+                <div>
+                    <div class="img-cloud-home"><img src="{{Data.data.attributes.cloud[0].image.data.attributes.url}}"/></div>
+                    <div class="text-container-card-cloud">
+                        <markdown class="text-card-cloud" [data]="Data.data.attributes.cloud[0].contenido"></markdown>
+                        <button class="button button-color" [routerLink]="['/caso']">Quiero la ayuda de Ukei
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

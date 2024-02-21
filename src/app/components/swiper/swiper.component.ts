@@ -35,7 +35,9 @@ export class SwiperComponent {
     autoplay:true,
     navSpeed: 600,
     autoplaySpeed: 1000,
+    autoWidth:true,
+    autoplayTimeout: 9000,
+    navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 
-    navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
   }
 }

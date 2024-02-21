@@ -7,11 +7,15 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { AppServerModule } from './src/main.server';
 import * as proxy from 'http-proxy-middleware'
+import * as https from 'https';
+import * as fs from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  server.use('/uploads', proxy.createProxyMiddleware({target: 'http://44.211.77.184:1337'}));
+  server.use('/uploads', proxy.createProxyMiddleware({target: 'https://ukeigestion.com'}));
+  server.use('/api', proxy.createProxyMiddleware({target: 'https://ukeigestion.com'}));
+  server.use('/content-type-builder', proxy.createProxyMiddleware({target: 'https://ukeigestion.com'}));
   const distFolder = join(process.cwd(), 'dist/ukei-website/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
@@ -40,11 +44,11 @@ export function app(): express.Express {
 
 function run(): void {
   const port = process.env['PORT'] || 4000;
-
-  // Start up the Node server
+  
   const server = app();
+  // Start up the Node server
   server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Node Express server listening on https://localhost:${port}`);
   });
 }
 

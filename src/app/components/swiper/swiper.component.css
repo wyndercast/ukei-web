@@ -58,7 +58,7 @@
   border-radius: 20px;
   border: 0;
   height: 276px;
-  width: 330px;
+  width: calc(88% - 10px);
 }
 .card .card-img-top {
   max-width: 60px;
@@ -113,7 +113,7 @@
   max-height: 380px;
   height: 380px;
   transform: scale3d(1, 1, 1) !important;
-  width: 465px
+  width: calc(90% - 8px);
 }
 ::ng-deep .center h5 {
   font-size: 19px;
@@ -180,7 +180,7 @@
   display: none !important;
 }
 ::ng-deep  .owl-dot.active:before {
-  content: counter(slides-num) " /";
+  content: counter(slides-num) " / ";
  /* Use the same counter to get current item. */
   display: inline-block;
   vertical-align: middle;

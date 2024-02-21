@@ -125,7 +125,7 @@
         display: block;
     }
     .container-accordion{
-        padding: 16px 20px;
+        padding: 16px 20px !important;
     }
     .text-container-card-cloud button{
         margin-bottom: 20px !important;
@@ -177,4 +177,13 @@
       .img-cover-logo{
         margin-left: -26px;
       }
+}
+
+@media screen and  (max-width: 1300px) {
+  .container-accordion{
+    padding: 16px 152px
+  }
+  .cloud-top{
+    margin-top: -28px;
+  }
 }

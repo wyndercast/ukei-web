@@ -221,6 +221,13 @@ textarea{
   grid-column: 1/3; 
   width: 100%;
 }
+
+@media screen and (max-width: 1300px) {
+  .container{
+    padding: 46px 130px;
+  }
+}
+
 @media screen and (min-width : 346px) and (max-width: 576px) { /** móviles**/
   .mobile{
     display: block;

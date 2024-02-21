@@ -16,7 +16,6 @@
           680: {
             items: 2,
             nav: false,
-            loop: false
           },
           1000: {
             items: 3,

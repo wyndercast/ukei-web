@@ -2,7 +2,7 @@ import HttpsProxyAgent from 'https-proxy-agent';
 
 const proxyConfig = [{
   context: '/uploads',
-  target: 'http://3.84.51.104:1337',
+  target: 'http://54.147.235.44:1337',
   secure: false
 }];
 

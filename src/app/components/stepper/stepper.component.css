@@ -85,6 +85,12 @@
     display: none;
   }
 
+  @media screen and (max-width: 1300px){
+    .stepper-one img{
+        width: 100%;
+    }
+  }
+
   @media screen and (min-width: 330px) and (max-width:578px) {
     .img-stepper{
         width: 230px;

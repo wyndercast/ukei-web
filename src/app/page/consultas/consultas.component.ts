@@ -54,8 +54,9 @@ export class ConsultasComponent implements OnInit{
       return;
     }
 
-    this.strapiService.consultaDeTramite(this.formTramite!.get('numeroTramite')!.value, this.formTramite!.get('documento')!.value).subscribe((tramite:Tramite[]) => {
-        this.tramite = tramite[0];
+    this.strapiService.consultaDeTramite(this.formTramite!.get('numeroTramite')!.value, this.formTramite!.get('documento')!.value).subscribe((tramite:any) => {
+        this.tramite = tramite.content[0];
+        console.log("CCC",this.tramite)
         if(this.tramite == undefined){
           this.openDialog();
           return;

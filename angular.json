@@ -142,11 +142,17 @@
           "configurations": {
             "development": {
               "browserTarget": "ukei-website:build:development",
-              "serverTarget": "ukei-website:server:development"
+              "serverTarget": "ukei-website:server:development",
+              "ssl": true,
+              "sslCert": "/home/ubuntu/etc/ssl/certificate.crt",
+              "sslKey": "/home/ubuntu/etc/ssl/private.key"
             },
             "production": {
               "browserTarget": "ukei-website:build:production",
-              "serverTarget": "ukei-website:server:production"
+              "serverTarget": "ukei-website:server:production",
+              "ssl": true,
+              "sslCert": "/home/ubuntu/etc/ssl/certificate.crt",
+              "sslKey": "/home/ubuntu/etc/ssl/private.key"
             }
           },
           "defaultConfiguration": "development"

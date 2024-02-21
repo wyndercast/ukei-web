@@ -57,6 +57,18 @@
     display: none;
 }
 
+@media screen and (max-width: 1300px) {
+    .container-image img{
+        width: 70%;
+    }
+    .container{
+        padding: 76px 150px;
+    }
+    .title{
+        font-size: 17px;
+    }
+}
+
  @media screen and (min-width: 315px) and (max-width: 576px){
     .title-c{
         grid-column: 1;

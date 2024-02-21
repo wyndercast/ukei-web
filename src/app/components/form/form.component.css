@@ -4,6 +4,7 @@
     padding: 20px 275px;
     float: left;
     background-size: cover;
+    width: 100%;
 }
 .container{
     background-size: 100vw 121vh;
@@ -142,6 +143,23 @@ textarea{
 }
 .f-div{
   padding: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    padding: 20px 10px;
+  }
+  .container-image{
+    padding: 20px 230px;
+  }
+  .container-image img{
+    width: 80%;
+    position: relative;
+    right: -209px;
+  }
+  .cloud-top{
+    margin-top: -28px;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width:578px) {

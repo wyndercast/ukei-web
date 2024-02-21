@@ -53,6 +53,12 @@ h3{
   line-height: 25px;
   color: white;
 }
+.text-description-white ::ng-deep a{
+    text-decoration-color: white;
+    color: white;
+}
+
+
 .text-description-gray{
   font-family: Nunito-Regular;
   font-size : 18px;
@@ -109,6 +115,7 @@ h3{
   font-family: Nunito-Regular;
   font-size : 18px;
   line-height: 25px;
+  text-align: left;
 }
 
 .text-form{
@@ -127,5 +134,16 @@ h3{
     font-size: 16px !important;
   }
 }
+
+@media screen and (max-width: 1259px){
+  .button {
+    padding: 8px 8px !important;
+  }
+  .header-button{
+    display: flex;
+  }
+  
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

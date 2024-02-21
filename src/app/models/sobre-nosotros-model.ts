@@ -27,6 +27,7 @@ export interface Attributes {
     bannerDos:   BannerDOS;
     cards:       Card[];
     cloud:       Cloud;
+    textFooterCard: string;
 }
 
 export interface BannerDOS {

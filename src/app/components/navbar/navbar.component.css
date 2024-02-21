@@ -167,5 +167,8 @@ nav ul {
     .menu{
         gap: 45px;
     }
+    nav ul{
+        gap: 39px;
+    }
     
 }

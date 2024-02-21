@@ -2,7 +2,7 @@
     background-color: #E6EAF3;
     background-image: url('/assets/image/wall-morado1.png');
     background-size: 100vw 121vh;
-    padding: 46px 265px;
+    padding: 32px 265px
 }
 .banner{
     display: grid;
@@ -167,13 +167,11 @@ textarea{
 .card-flex{
   background-color: white;
   border-radius: 40px;
-  max-width: 592px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
   box-shadow: 3px 7px 13px 3px #2D1DCD47;
-  height: 300px;
-  max-height: 300px;
+
 }
 .text-card ::ng-deep a{
   color: #7D48FF !important;
@@ -211,7 +209,35 @@ textarea{
   padding: 10px;
 }
 
+@media screen and (max-width: 1250px) {
+  .container{
+    padding: 46px 130px;
+  }
+  .container-image-form img{
+    position: relative;
+    right: -160px;
+    width: 90%;
+    top: 40px;
+  }
+  .title ::ng-deep h1{
+    font-size: 39px;
+  }
+  .container-help{
+    padding: 46px 130px;
+  }
+  .card-flex{
+    width: 100%;
+    height: 95%;
+  }
+}
+
 @media screen and (min-width : 346px) and (max-width: 576px) { /** móviles**/
+  .container-image-form img{
+    position: relative;
+    right: 0px;
+    width: 95% !important;
+    top: 4px;
+  }
   .container{
     padding: 46px 30px;
   }

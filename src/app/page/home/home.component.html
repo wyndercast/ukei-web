@@ -74,18 +74,18 @@
                         </div>
                         <div *ngIf="step.titleIcono.data" class="subtitle-stepper-item">
                             <img src="{{step.titleIcono.data.attributes.url}}"/>
-                            <h4 class="stepper-title-two">{{step.titleItem}}</h4>
+                            <h4 class="stepper-title-two" style="margin-bottom: 0;">{{step.titleItem}}</h4>
                         </div>
                         <div>
-                            <markdown class="stepper-text" [data]="step.description"></markdown>
+                            <markdown class="stepper-text desc-uno" [data]="step.description"></markdown>
                         </div>
                         <div *ngIf="i == 0">
                             <div class="subtitle-stepper-item">
                                 <img [src]="step.titleIcono.data.attributes.url"/>   
-                                <h4 class="stepper-title-two">OTRAS RECLAMACIONES</h4>
+                                <h4 class="stepper-title-two" style="margin-bottom: 0;">{{step.subTitle}}</h4>
                             </div>
                             <div>
-                                <markdown class="stepper-text">Cualquier clase de reclamo: sector turismo, vivienda, aéreo, compras, etc.</markdown>
+                                <markdown class="stepper-text desc-uno">{{step.textSubtitle}}</markdown>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
             </div> 
         </div>
     </div>
-    <div style="text-align: center;"> <button [routerLink]="['/caso']" class="button button-purple" style="width:15%">Cuéntanos tu caso aquí
+    <div style="text-align: center;"> <button [routerLink]="['/caso']" class="button button-purple" style="width:auto">Cuéntanos tu caso aquí
         <i class="fa-solid fa-pen" style="border-color: #ffffff;background-color: transparent;"></i>
     </button></div>
     <ng-container>

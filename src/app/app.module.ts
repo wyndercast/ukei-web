@@ -34,6 +34,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { LoaderSpinnerComponent } from './components/loader-spinner/loader-spinner.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { LoaderSpinnerComponent } from './components/loader-spinner/loader-spinn
     provide: HTTP_INTERCEPTORS,
     useClass: LoaderInterceptor,
     multi: true,
- }],
+ },
+ {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

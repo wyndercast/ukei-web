@@ -85,6 +85,12 @@
     font-size: 15px;
 }
 
+@media screen and (max-width: 1300px) {
+    .container{
+        padding: 20px 130px;
+    }
+}
+
 @media screen and (min-width : 346px) and (max-width: 576px) { /** móviles**/
     .blog-grid{
         grid-template-columns: repeat(1, 1fr);

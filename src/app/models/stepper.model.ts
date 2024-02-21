@@ -9,6 +9,8 @@ export interface Stepper {
     titleIcono:   ImageData;
     item:         Item[];
     iconostepper: ImageData;
+    subTitle?: string;
+    textSubtitle?: string;
 }
 
 export interface Item {

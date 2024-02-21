@@ -47,10 +47,8 @@
 .card{
     background-color: white;
     border-radius: 40px;
-    max-width: 320px;
-    width: 320px;
-    height: 392px;
-    max-height: 400px;
+    width: auto;
+    height: auto;
     margin: 5px;
 }
 
@@ -72,7 +70,6 @@
 .container-card{
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 30px;
 }
 
@@ -157,6 +154,9 @@
     align-items: center;
 }
 
+.desc-uno ::ng-deep p{
+    margin-top: 0;
+}
 .stepper-title{
     font-family: Nunito-Black;
     font-weight: 800;
@@ -499,7 +499,7 @@
     .container-card{
         gap: 28px;
         display: grid;
-        grid-template-columns: repeat(2, 345px);
+        grid-template-columns: repeat(4, 220px);
     }
     .container-service{
         padding: 46px 76px;

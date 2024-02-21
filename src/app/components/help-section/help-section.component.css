@@ -106,6 +106,12 @@ h2{
     text-align: left;
 }
 
+@media screen and (max-width: 1300px) {
+    .container{
+        padding: 0px 117px;
+    }
+}
+
 @media screen and (min-width: 350px) and (max-width: 578px) {
     .container-card-grid-second{
         grid-template-columns: repeat(1, 1fr);

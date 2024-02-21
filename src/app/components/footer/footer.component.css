@@ -97,3 +97,16 @@ li{
         padding: 10px 76px;
     }
 }
+
+@media screen and (max-width: 1259px){
+    .container{
+        padding: 10px 80px
+    }
+    
+}
+
+@media  screen and (min-width: 1300px) and (max-width: 1500px) {
+    .container{
+        padding: 10px 76px;
+    }
+}

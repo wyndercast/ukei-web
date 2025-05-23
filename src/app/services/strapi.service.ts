@@ -67,21 +67,21 @@ export class StrapiService {
   }
 
   consultaDeTramite(numeroTramite:number, documento:any): Observable<any>{
-    return this.http.get<any>(`https://3.88.135.47/tramites?numeroTramite=${numeroTramite}&documento=${documento}&page=0&size=1`); 
+    return this.http.get<any>(`https://app.ukeigestion.com/tramites?numeroTramite=${numeroTramite}&documento=${documento}&page=0&size=1`); 
   }
 
   consultaEstadoHomologado(estado:any): Observable<any[]>{
-    return this.http.post<any[]>(`https://3.88.135.47/estados/getAllEstados`, estado); 
+    return this.http.post<any[]>(`https://app.ukeigestion.com/estados/getAllEstados`, estado); 
   }
 
   crearCasoService(caso:any): Observable<any> {
-    return this.http.post<any>(`https://3.88.135.47/tramites`, caso); 
+    return this.http.post<any>(`https://app.ukeigestion.com/tramites`, caso); 
   }
   consultaEstados(): Observable<any[]>{
-    return this.http.post<any[]>(`https://3.88.135.47/estados/getAllEstados`, {}); 
+    return this.http.post<any[]>(`https://app.ukeigestion.com/estados/getAllEstados`, {}); 
   }
   enviarCorreo(correo:any): Observable<any>{
-    return this.http.post<any>(`https://3.88.135.47/send-email`, correo); 
+    return this.http.post<any>(`https://app.ukeigestion.com/send-email`, correo); 
   }
   getFile(): Observable<any>{
     return this.http.get('assets/templates/correoBienvenida.html', { responseType: "text"});

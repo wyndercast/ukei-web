@@ -2,7 +2,7 @@
 export const environment = {
     production: false,
     //localUrl: 'http://54.172.76.227:8080/',
-    localUrl: 'https://ukeigestion.com/',
+    localUrl: 'https://ukei-strapi.onrender.com/',
     //localUrl: 'http://localhost:1337/'
     //strapiUrl: 'https://dev.straLa pagina de Calendly se debe abrir en una nueva paginapi.forsa.com.co/api/',
     //restcountriesUrl: 'https://restcountries.com/v3.1/',

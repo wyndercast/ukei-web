@@ -1,12 +1,11 @@
 [build]
   # Comando para construir tu proyecto
   command = "npm install && npm run build"
-  
+
   # Carpeta que Netlify usará como public
   publish = "dist/ukei-website/browser"
 
-  # Node.js version compatible con better-sqlite3
-  node_version = "20"
-
-[context.production.environment]
+[build.environment]
+  # Versión de Node.js compatible con better-sqlite3
+  NODE_VERSION = "20"
   NODE_ENV = "production"

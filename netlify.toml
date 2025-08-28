@@ -8,7 +8,18 @@
   NODE_ENV = "production"
 
 [[redirects]]
-  from = "/uploads/*"
+  from = "https://ukeiweb.netlify.app/uploads/*"
   to = "https://ukei-strapi.onrender.com/uploads/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "https://ukeiweb.netlify.app/api/*"
+  to = "https://ukei-strapi.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -6,7 +6,7 @@
   publish = "dist/ukei-website/browser"
 
   # Node.js version compatible con better-sqlite3
-  node_version = "18"
+  node_version = "20"
 
 [context.production.environment]
   NODE_ENV = "production"

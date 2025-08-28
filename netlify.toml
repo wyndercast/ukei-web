@@ -1,6 +1,6 @@
 [build]
-  # Comando para construir tu proyecto
-  command = "npm install && npm run build"
+  # Comando para construir tu proyecto usando Angular CLI local
+  command = "npm install && ./node_modules/.bin/ng build"
 
   # Carpeta que Netlify usará como public
   publish = "dist/ukei-website/browser"

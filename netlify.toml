@@ -6,3 +6,9 @@
 [build.environment]
   NODE_VERSION = "20"
   NODE_ENV = "production"
+
+[[redirects]]
+  from = "/uploads/*"
+  to = "https://ukei-strapi.onrender.com/uploads/:splat"
+  status = 200
+  force = true

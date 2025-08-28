@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npx ng build"
+  command = "npm install && npx ng build --configuration production"
   publish = "dist/ukei-website/browser"
 
 [build.environment]

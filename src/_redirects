@@ -1,0 +1,2 @@
+# Proxy para los uploads de Strapi
+/uploads/*  https://ukei-strapi.onrender.com/uploads/:splat  200

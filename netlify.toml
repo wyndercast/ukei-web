@@ -1,11 +1,7 @@
 [build]
-  # Comando para construir tu proyecto usando Angular CLI local
-  command = "npm install && ./node_modules/.bin/ng build"
-
-  # Carpeta que Netlify usará como public
+  command = "npm install && npx ng build"
   publish = "dist/ukei-website/browser"
 
 [build.environment]
-  # Versión de Node.js compatible con better-sqlite3
   NODE_VERSION = "20"
   NODE_ENV = "production"

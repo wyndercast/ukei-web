@@ -10,7 +10,8 @@
     "dev:ssr": "ng run ukei-website:serve-ssr",
     "serve:ssr": "node dist/ukei-website/server/main.js",
     "build:ssr": "ng build && ng run ukei-website:server",
-    "prerender": "ng run ukei-website:prerender"
+    "prerender": "ng run ukei-website:prerender",
+    "copy-redirects": "cpx _redirects dist/ukei-website/browser/"
   },
   "private": true,
   "dependencies": {

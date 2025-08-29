@@ -33,7 +33,7 @@
         <ng-container>
             <div class="container-card">
                 <div class="card" *ngFor="let card of Home.data.attributes.tarjeta">
-                    <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                    <div class="img-icono"><img [src]="card.icono.data.attributes.url"/></div>
                     <div class="text-container-card"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
         <ng-container>
             <div class="container-card-grid">
                 <div class="card-flex width512" *ngFor="let card of Home.data.attributes.tarjetaSection">
-                    <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                    <div class="img-icono"><img [src]="card.icono.data.attributes.url"/></div>
                     <div class="text-container"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
                 </div>
             </div>
@@ -67,13 +67,13 @@
                             <h3 class="stepper-title">{{step.title}}</h3>
                             <div *ngFor="let item of step.item">
                                 <div class="items">
-                                    <img src="{{item.icono.data.attributes.url}}"/>   
+                                    <img [src]="item.icono.data.attributes.url"/>   
                                     <p class="stepper-text">{{item.itemname}}</p>
                                 </div> 
                             </div>
                         </div>
                         <div *ngIf="step.titleIcono.data" class="subtitle-stepper-item">
-                            <img src="{{step.titleIcono.data.attributes.url}}"/>
+                            <img [src]="step.titleIcono.data.attributes.url"/>
                             <h4 class="stepper-title-two" style="margin-bottom: 0;">{{step.titleItem}}</h4>
                         </div>
                         <div>
@@ -105,7 +105,7 @@
         <div class="container-block">
             <div class="container-cloud">
                 <div class="container-cloud-two">
-                    <div class="img-cover-logo"><img src="{{Home.data.attributes.section.image.data.attributes.url}}"/></div>
+                    <div class="img-cover-logo"><img [src]="Home.data.attributes.section.image.data.attributes.url"/></div>
                     <div class="text-container-card-cloud">
                         <markdown class="text-card-cloud" [data]="Home.data.attributes.section.contenido"></markdown>
                     </div>
@@ -130,7 +130,7 @@
             <ng-container>
                 <div class="container-card-grid">
                     <div class="card-flex just-r" *ngFor="let card of Home.data.attributes.tarjetasTres">
-                        <div class="img-icono"><img src="{{card.icono.data.attributes.url}}"/></div>
+                        <div class="img-icono"><img [src]="card.icono.data.attributes.url"/></div>
                         <div class="text-container-card"><markdown class="text-card" [data]="card.textoBase"></markdown></div>
                     </div>
                 </div>

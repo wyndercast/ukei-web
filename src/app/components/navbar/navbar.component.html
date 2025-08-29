@@ -1,7 +1,7 @@
 <header>
     <nav *ngIf="navbar | async as NavBar" class="navbar">
         <div>
-            <img class="logo" [routerLink]="['/home']" style="cursor: pointer;" src="{{NavBar.data.attributes.logo.data.attributes.url}}"/>
+            <img class="logo" [routerLink]="['/home']" style="cursor: pointer;" src="NavBar.data.attributes.logo.data.attributes.url"/>
         </div>
         <div class="desktop">
             <div class="content-menu">

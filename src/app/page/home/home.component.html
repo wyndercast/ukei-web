@@ -139,7 +139,7 @@
             <ng-container>
                 <div class="container-cloud">
                     <div>
-                        <div class="img-cloud-home"><img src="{{Home.data.attributes.sectionCuatro.image.data.attributes.url}}"/></div>
+                        <div class="img-cloud-home"><img [src]="Home.data.attributes.sectionCuatro.image.data.attributes.url"/></div>
                         <div class="text-container-card-cloud">
                             <markdown class="text-card-cloud" [data]="Home.data.attributes.sectionCuatro.contenido"></markdown>
                         </div>
